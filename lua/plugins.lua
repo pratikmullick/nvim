@@ -15,6 +15,6 @@ return require('packer').startup(function(use)
 	-- Kanagawa Color Scheme
 	use 'rebelot/kanagawa.nvim'
 	-- Focus Colorscheme
-	use 'nvim-focus/focus.nvim'
+	use 'friskenstein/focus.nvim'
 end)
 

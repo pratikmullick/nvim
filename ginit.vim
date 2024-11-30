@@ -5,6 +5,6 @@ if has("win32")
 endif
 
 if has("linux")
-    colorscheme zellner
+    colorscheme focus
     GuiFont! Hack:h12
 endif
