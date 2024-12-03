@@ -66,4 +66,20 @@ augroup my_files
         \ setlocal softtabstop=4 shiftwidth=4
 augroup END
 
+
 lua require('plugins')
+
+lua << EOF
+require'nvim-tree'.setup {
+    renderer = {
+        icons = {
+            show = {
+                file = false,
+                folder = false,
+                git = false,
+                folder_arrow = false
+            }
+        }
+    }
+}
+EOF
