@@ -1,7 +1,11 @@
 " Split Settings for GUI NVim
+
+" Set to automatically change working directory
+set autochdir
+
 if has("win32")
-    colorscheme zellner
-    GuiFont! Lucida\ Console:h12:cANSI
+    colorscheme kanagawa-lotus
+    GuiFont! IBM\ Plex\ Mono:h12:cANSI
 endif
 
 if has("linux")
