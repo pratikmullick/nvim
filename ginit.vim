@@ -1,11 +1,12 @@
 " Split Settings for GUI NVim
+" Customize font by commenting out defaults
 
 " Set to automatically change working directory
 set autochdir
 
 if has("win32")
     colorscheme kanagawa-lotus
-    GuiFont! IBM\ Plex\ Mono:h12:cANSI
+    GuiFont! Consolas:h12:cANSI
 endif
 
 if has("linux")
