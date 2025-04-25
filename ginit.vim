@@ -5,11 +5,11 @@
 set autochdir
 
 if has("win32")
-    colorscheme kanagawa-lotus
     GuiFont! Consolas:h12:cANSI
+    colorscheme github_light
 endif
 
 if has("linux")
-    colorscheme focus
     GuiFont! Hack:h12
+    colorscheme github_light
 endif
