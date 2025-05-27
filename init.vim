@@ -66,5 +66,5 @@ augroup my_files
         \ setlocal softtabstop=4 shiftwidth=4
 augroup END
 
-" Import Plugins from `lua/plugins.lua`
-lua require('plugins')
+" Import `init.lua`
+lua require('init')
