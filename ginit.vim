@@ -18,9 +18,9 @@ endif
 " GUI Font Settings
 if has("win32")
     if exists("g:neovide")
-        set guifont=SF\ Mono:h12
+        set guifont=Consolas:h12:cANSI
     else
-        GuiFont! Consolas:h12
+        GuiFont! Consolas:h12:cANSI
     endif
 endif
 
