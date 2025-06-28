@@ -14,6 +14,13 @@ return require('packer').startup(function(use)
 		end,
 	}
 
+	-- Markdown Table Mode
+	use {
+		'Kicamon/markdown-table-mode.nvim', config = function()
+			require('markdown-table-mode').setup()
+		end
+	}
+
 	-- LSP Installation and Configuration
 	-- use 'williamboman/mason.nvim'
 	-- use 'williamboman/mason-lspconfig.nvim'
@@ -38,5 +45,6 @@ return require('packer').startup(function(use)
 	use 'friskenstein/focus.nvim'
 	-- Github Colorscheme
 	use 'projekt0n/github-nvim-theme'
+
 end)
 
