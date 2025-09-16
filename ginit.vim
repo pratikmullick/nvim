@@ -33,4 +33,4 @@ if has("linux")
 endif
 
 " Colorscheme
-colorscheme github_default_light
+colorscheme github_light_default
