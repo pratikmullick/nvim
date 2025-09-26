@@ -1,42 +1,30 @@
-## Neovim Configuration
-The Neovim configuration consists of two files:
-- `init.vim`: Loads default settings for Neovim
-- `ginit.vim`: Loads GUI settings for Neovim-Qt (prefer Neovim-Qt)
+# Neovim Configuration
+This repository contains my requisite Neovim configuration, both for CLI
+programs accessible through the `nvim` command, as well as GUI Neovim
+interfaces such as Neovim Qt or Neovide.
 
-### Location
+## Location
+This repository can be cloned directly to the following directories:
 - **Windows** : `%USERPROFILE%\AppData\Local\nvim`
 - **Linux**   : `$XDG_CONFIG_HOME/nvim`
 - **Mac OS**  : TBD
 - **BSD**     : TBD
 
-## Neovim Plugins
-Neovim plug-in setup is slightly complex. This document uses Packer, which
-needs to be downloaded and installed using the following command, before
-plugins can be initiated with `:PackerSync`
+## Structure
+The repository is split into two parts, the editor configuration handled by
+`init.vim` and `ginit.vim` for CLI and GUI interfaces respectively; and the
+contents of the `lua` directory, used primarily for plugin management. This is
+chosen to maintain backward compatibility with Vim and its GUI counterpart,
+with `init.vim` and `ginit.vim` being a copy of `vimrc` and `gvimrc` present
+inside the [vim][vim] directory of my [dotfiles repository][dotfiles]; as well
+as take advantage of the newer plugins.
 
-On Linux, use the following command:
-```
-$  git clone --depth 1 https://github.com/wbthomason/packer.nvim  \
-      ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
+## Plugins
+This configuration uses [lazy.nvim][lazy] to manage plugins. The plugin manager
+is capable of bootstrapping itself, and downloading plugins during the initial
+setup. As a backup, an installation script to explicitly install the plugin
+manager is provided as well.
 
-On Windows, use the following command:
-```
-> git clone https://github.com/wbthomason/packer.nvim \
-    "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
-```
-The plugins are initiated as Lua code inside the `plugin` directory, defined
-using `plugins.lua` file and referenced in the last line of `init.vim`.
-Currently selected plugins include Packer itself, as well as Neotree file
-browser and its dependencies, as well as two color-schemes: Kanagawa and Focus.
-
-### Neovim Colors
-Neovim colors can be placed in the following directories, which are in the
-same format as Vim color schemes. 
-- **Windows** : `%USERPROFILE%\AppData\Local\nvim\colors`
-- **Linux**   : `$XDG_CONFIG_HOME/nvim/colors`
-- **Mac OS**  : TBD
-- **BSD**     : TBD
-
-**NOTE**: It is recommended to use plugins to simplify color management.
-
+[vim]: https://github.com/pratikmullick/dotfiles/tree/master/vim
+[dotfiles]: https://github.com/pratikmullick/dotfiles
+[lazy]: https://github.com/folke/lazy.nvim
