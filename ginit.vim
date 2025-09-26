@@ -32,5 +32,9 @@ if has("linux")
     endif
 endif
 
-" Colorscheme
-colorscheme github_light_default
+" Colorscheme (with Lazy.nvim)
+if executable('nvim')
+    autocmd VimEnter * colorscheme github_light_default
+else
+    colorscheme github_light_default
+endif
