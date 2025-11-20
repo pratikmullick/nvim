@@ -1,3 +1,5 @@
+**NOTE: THIS REPOSITORY IS ARCHIVED**
+
 # Neovim Configuration
 This repository contains my requisite Neovim configuration, both for CLI
 programs accessible through the `nvim` command, as well as GUI Neovim
@@ -16,8 +18,8 @@ The repository is split into two parts, the editor configuration handled by
 contents of the `lua` directory, used primarily for plugin management. This is
 chosen to maintain backward compatibility with Vim and its GUI counterpart,
 with `init.vim` and `ginit.vim` being a copy of `vimrc` and `gvimrc` present
-inside the [vim][vim] directory of my [dotfiles repository][dotfiles]; as well
-as take advantage of the newer plugins.
+inside the "vim" directory of my [dotfiles repository][dotfiles]; as well as
+take advantage of the newer plugins.
 
 ## Plugins
 This configuration uses [lazy.nvim][lazy] to manage plugins. The plugin manager
@@ -25,6 +27,5 @@ is capable of bootstrapping itself, and downloading plugins during the initial
 setup. As a backup, an installation script to explicitly install the plugin
 manager is provided as well.
 
-[vim]: https://github.com/pratikmullick/dotfiles/tree/master/vim
 [dotfiles]: https://github.com/pratikmullick/dotfiles
 [lazy]: https://github.com/folke/lazy.nvim
